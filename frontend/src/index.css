@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* OEMS design tokens — "exam hall": navy ink, cool paper, OMR-bubble yellow */
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --color-ink: #1e2b45;
+  --color-ink-soft: #33415e;
+  --color-paper: #f3f5f8;
+  --color-surface: #ffffff;
+  --color-rule: #d9dfe8;
+  --color-muted: #5b6780;
+  --color-teal: #0e7c6b;
+  --color-teal-soft: #e3f3ef;
+  --color-amber: #9a6512;
+  --color-amber-soft: #fbf1dc;
+  --color-danger: #b4362a;
+  --color-danger-soft: #fbe7e4;
+  --color-bubble: #f7d774;
+  --color-bubble-soft: #fdf4d3;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { font-family: var(--font-sans); font-size: 15px; line-height: 1.5; }
+
+:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 2px; border-radius: 4px; }
+
+code, pre, .sql { font-family: var(--font-mono); font-size: 13px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
